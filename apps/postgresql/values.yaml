@@ -1,0 +1,8 @@
+postgresql:
+  auth:
+    username: demo
+    password: demo12345
+    database: demodb
+  primary:
+    persistence:
+      enabled: false

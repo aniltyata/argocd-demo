@@ -1,0 +1,7 @@
+minio:
+  auth:
+    rootUser: admin
+    rootPassword: admin12345
+  defaultBuckets: "demo"
+  persistence:
+    enabled: false
