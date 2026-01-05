@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: postgresql
+  namespace: dn-argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/aniltyata/argocd-demo
+    targetRevision: main
+    path: apps/postgresql
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: data-platform
+  syncPolicy:
+    automated: null
